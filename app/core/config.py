@@ -1,7 +1,11 @@
 from pydantic_settings import BaseSettings
 from pydantic import PostgresDsn
 
+# BaseSettings from pydantic takes care of .env vars (no need for os.getenv or similar)
 class Settings(BaseSettings):
+    # App
+    PROJECT_NAME: str = "ESL lessons backend"
+
     # Security
     SECRET_KEY: str
     ALGORITHM: str = "HS256"
@@ -11,7 +15,7 @@ class Settings(BaseSettings):
     DATABASE_URL: PostgresDsn
     
     # CORS
-    BACKEND_CORS_ORIGINS: list[str] = ["http://localhost:3000", "http://localhost:8080"]
+    BACKEND_CORS_ORIGINS: list[str]
     
     class Config:
         env_file = ".env"
