@@ -6,12 +6,9 @@ from app.core.security import verify_token
 from app.services.auth_service import AuthService
 from app.models.user import User
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
 
-async def get_current_user(
-        credentials: HTTPAuthorizationCredentials = Security(oauth2_scheme), 
-        db: Session = Security(get_db)
-        ) -> User:
+async def get_current_user(token: str = Security(oauth2_scheme), db: Session = Security(get_db)) -> User:
     
     credentials_exception = HTTPException(
         status_code = status.HTTP_401_UNAUTHORIZED,
@@ -19,7 +16,7 @@ async def get_current_user(
         headers={"WWW-Authenticate": "Bearer"}
     )
 
-    email = verify_token(credentials.credential)
+    email = verify_token(token)
     if email is None:
         raise credentials_exception
 
