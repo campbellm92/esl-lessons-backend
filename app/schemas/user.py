@@ -5,7 +5,7 @@ from typing import Optional
 # Base schema for users
 class UserBase(BaseModel):
     email: EmailStr
-    first_name: str
+    first_name: Optional[str] = None
 
 # Creating users
 class UserCreate(UserBase):
@@ -14,7 +14,7 @@ class UserCreate(UserBase):
 # Updating users
 class UserUpdate(BaseModel):
     email: Optional[EmailStr] = None
-    username: Optional[str] = None
+    first_name: Optional[str] = None
     password: Optional[str] = None
 
 # Schema for responses (without password)
