@@ -21,12 +21,13 @@ def register_user(user: UserCreate, db: Session = Security(get_db)):
     return AuthService.create_user(db=db, user=user)
 
 @router.post("/login", response_model=Token)
-def login_user(
-    form_data: OAuth2PasswordRequestForm = Security(),
-    db: Session = Security(get_db)
-):
-    
-    user = AuthService.authenticate_user(db, form_data.email, form_data.password)
+def login_user(form_data: OAuth2PasswordRequestForm = Security(), db: Session = Security(get_db)):
+    ''' 
+    Note: form_data.username is used here because the fastAPI OAuth flow specifies that you must send
+    username and password as form data (email or anything else won't work)
+    In any case, email does work as username. Just something to be aware of when testing.
+    '''
+    user = AuthService.authenticate_user(db, form_data.username, form_data.password)
     if not user:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
