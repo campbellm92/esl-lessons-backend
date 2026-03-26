@@ -2,3 +2,4 @@ fastapi==0.135.2
 sqlalchemy==2.0.48
 pwdlib[argon2]==0.3.0
 pyjwt==2.12.1
+psycopg2==2.9.11
