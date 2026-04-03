@@ -1,0 +1,299 @@
+{
+  "title": "How did English Evolve?",
+  "slug": "how-did-english-evolve",
+  "level": ["B2", "C1"],
+  "skills_focus": ["Vocabulary", "Listening comprehension", "Speaking"],
+  "grammar_focus": [],
+
+  "content": {
+    "video": {
+      "url": "https://www.youtube.com/watch?v=kIzFz9T5rhI&list=PLF9A468788928A351&index=23&ab_channel=TED-Ed"
+    },
+
+    "sections": [
+      {
+        "id": "vocab-preteach",
+        "order": 1,
+        "type": "gap_fill",
+        "prompt": "Complete the sentences below with the following words and phrases in their right forms:",
+        "word_bank": [
+          "expression",
+          "tribe",
+          "do away with",
+          "recognisable",
+          "conquest",
+          "royalty",
+          "aristocracy",
+          "peasant",
+          "refined",
+          "evoke",
+          "plain"
+        ],
+
+        "questions": [
+          {
+            "id": "vocab_1",
+            "type": "gap_fill",
+            "prompt": "In 2013 there were thought to be roughly 100 uncontacted ____________ worldwide, half of whom live in the Amazon rainforest.",
+            "answers": {
+              "correct": ["tribes"],
+              "acceptable": ["tribe"]
+            }
+          },
+          {
+            "id": "vocab_2",
+            "prompt": "His language was ____________. It appealed to the masses.",
+            "answers": {
+              "correct": ["plain"],
+              "acceptable": []
+            }
+          },
+          {
+            "id": "vocab_3",
+            "prompt": "The old house ____________ memories of his childhood.",
+            "answers": {
+              "correct": ["evoked"],
+              "acceptable": ["evoke"]
+            }
+          },
+          {
+            "id": "vocab_4",
+            "prompt": "He changed the painting so much that the original was no longer ____________.",
+            "answers": {
+              "correct": ["recognisable"],
+              "acceptable": []
+            }
+          },
+          {
+            "id": "vocab_5",
+            "prompt": "The ____________ had all the influence in government and the daily lives of the people.",
+            "answers": {
+              "correct": ["aristocracy"],
+              "acceptable": []
+            }
+          },
+          {
+            "id": "vocab_6",
+            "prompt": "He continued to expand his kingdom by ____________.",
+            "answers": {
+              "correct": ["conquest"],
+              "acceptable": []
+            }
+          },
+          {
+            "id": "vocab_7",
+            "prompt": "The highlands in Scotland were populated mainly by ____________ farmers.",
+            "answers": {
+              "correct": ["peasant"],
+              "acceptable": []
+            }
+          },
+          {
+            "id": "vocab_8",
+            "prompt": "Computerization has enabled us to ____________ a lot of paperwork.",
+            "answers": {
+              "correct": ["do away with"],
+              "acceptable": []
+            }
+          },
+          {
+            "id": "vocab_9",
+            "prompt": "He had a passive ____________ on his face.",
+            "answers": {
+              "correct": ["expression"],
+              "acceptable": []
+            }
+          },
+          {
+            "id": "vocab_10",
+            "prompt": "That is a family that proceeds from a long line of ____________.",
+            "answers": {
+              "correct": ["royalty"],
+              "acceptable": []
+            }
+          },
+          {
+            "id": "vocab_11",
+            "prompt": "He said his tastes were ____________ because he only listened to classical music.",
+            "answers": {
+              "correct": ["refined"],
+              "acceptable": []
+            }
+          }
+        ]
+      },
+
+      {
+        "id": "pre-discussion",
+        "order": 2,
+        "type": "adaptive",
+        "video_segment": {
+          "start": 0,
+          "end": 51
+        },
+
+        "variants": {
+          "teacher": {
+            "type": "discussion",
+            "prompt": "Watch the first part of the video then discuss the following questions with a partner or your teacher:",
+            "questions": [
+              {
+                "id": "disc_1",
+                "prompt": "Who would say 'hearty welcome'?",
+                "sample_answer": "Speakers in more informal settings."
+              },
+              {
+                "id": "disc_2",
+                "prompt": "Who would say 'cordial reception'?",
+                "sample_answer": "Speakers in more formal, refined settings."
+              }
+            ]
+          },
+
+          "self": {
+            "type": "writing",
+            "prompt": "Watch the first part of the video then type a response to the following questions:",
+            "questions": [
+              {
+                "id": "write_1",
+                "type": "open",
+                "prompt": "Explain who would say 'hearty welcome' and why:",
+                "sample_answer": "Speakers in more informal situations might use 'hearty welcome'."
+              },
+              {
+                "id": "write_2",
+                "type": "open",
+                "prompt": "Explain who would say 'cordial reception' and why:",
+                "sample_answer": "Speakers in more formal, refined situations might use 'cordial reception'."
+              }
+            ]
+          }
+        }
+      },
+
+      {
+        "id": "comprehension",
+        "order": 3,
+        "type": "short_answer",
+
+        "video_segment": {
+          "start": 51,
+          "end": null
+        },
+
+        "prompt": "Answer the questions based on the video.",
+
+        "questions": [
+          {
+            "id": "short_comp_1",
+            "prompt": "What did the Romans protect the Celts and Britons from?",
+            "answers": {
+              "correct": ["Invading Saxons"],
+              "acceptable": ["Saxon invaders"]
+            }
+          },
+          {
+            "id": "short_comp_2",
+            "prompt": "What was the name of the Germanic language that arose from the tribes that settled in Britain?",
+            "answers": {
+              "correct": ["Anglo Saxon"],
+              "acceptable": ["Old English"]
+            }
+          },
+          {
+            "id": "short_comp_3",
+            "prompt": "When did the Vikings invade Great Britain?",
+            "answers": {
+              "correct": ["In the 700s"],
+              "acceptable": ["700s", "the 700s"]
+            }
+          },
+          {
+            "id": "short_comp_4",
+            "prompt": "When was the Norman Conquest?",
+            "answers": {
+              "correct": ["1066"],
+              "acceptable": ["in 1066"]
+            }
+          },
+          {
+            "id": "short_comp_5",
+            "prompt": "How was society divided after the Norman Conquest?",
+            "answers": {
+              "correct": [
+                "Between French-speaking aristocracy and Old English speaking peasants"
+              ],
+              "acceptable": [
+                "French-speaking aristocracy and Old English speaking peasants",
+                "French aristocracy and English peasants",
+                "Aristocracy and peasants"
+              ]
+            }
+          },
+          {
+            "id": "short_comp_6",
+            "prompt": "In which three main areas did the French spoken by the Normans influence the English language the most?",
+            "answers": {
+              "correct": ["Government, law and aristocracy"],
+              "acceptable": ["Government, law, aristocracy"]
+            }
+          },
+          {
+            "id": "short_comp_7",
+            "prompt": "Why did Anglo-Saxon words seem so 'plain'?",
+            "answers": {
+              "correct": ["Association with peasants"],
+              "acceptable": ["Because peasants used them"]
+            }
+          }
+        ]
+      },
+      {
+        "id": "free-discussion",
+        "order": 4,
+        "type": "adaptive",
+
+        "variants": {
+          "teacher": {
+            "type": "open_discussion",
+            "prompt": "Discuss the following questions with a partner or with your teacher:",
+            "questions": [
+              {
+                "id": "disc_1",
+                "prompt": "Were you right about the types of people who would say 'hearty welcome' and 'cordial reception'?"
+              },
+              {
+                "id": "disc_2",
+                "prompt": "Why do we perceive the two phrases differently?"
+              },
+              {
+                "id": "disc_3",
+                "prompt": "Can you think of other examples of English words that come from French?"
+              },
+              {
+                "id": "disc_4",
+                "prompt": "In what ways can your native language also have similar distinctions based on the words people use?"
+              }
+            ]
+          },
+          "self": {
+            "type": "free_writing",
+            "prompt": "Type some responses to the following questions:",
+            "questions": [
+              {
+                "id": "write_1",
+                "prompt": "Why do we perceive the two phrases 'hearty welcome' and 'cordial reception' differently?",
+                "sample_answer": "blah blah"
+              },
+              {
+                "id": "write_2",
+                "prompt": "In what ways can your native language also have similar distinctions based on the words people use?",
+                "sample_answer": "blah blah"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
