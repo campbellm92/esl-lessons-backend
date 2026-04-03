@@ -7,14 +7,14 @@ from app.core.config import settings
 engine = create_engine(str(settings.DATABASE_URL))
 
 # Create local session
-Session = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # Base for models
 Base = declarative_base()
 
 # Dependency to get DB session
 def get_db():
-    db = Session()
+    db = SessionLocal()
     try:
         yield db
     finally:
