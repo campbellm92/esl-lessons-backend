@@ -1,5 +1,5 @@
 from datetime import timedelta
-from fastapi import APIRouter, Security, HTTPException, status
+from fastapi import APIRouter, Depends, Security, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from app.api.deps import get_db, get_current_active_user
@@ -11,7 +11,7 @@ from app.services.auth_service import AuthService
 router = APIRouter()
 
 @router.post("/register", response_model=User, status_code=status.HTTP_201_CREATED)
-def register_user(user: UserCreate, db: Session = Security(get_db)):
+def register_user(user: UserCreate, db: Session = Depends(get_db)):
     if AuthService.is_email_taken(db, user.email):
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
@@ -21,7 +21,7 @@ def register_user(user: UserCreate, db: Session = Security(get_db)):
     return AuthService.create_user(db=db, user=user)
 
 @router.post("/login", response_model=Token)
-def login_user(form_data: OAuth2PasswordRequestForm = Security(), db: Session = Security(get_db)):
+def login_user(form_data: OAuth2PasswordRequestForm = Security(), db: Session = Depends(get_db)):
     ''' 
     Note: form_data.username is used here because the fastAPI OAuth flow specifies that you must send
     username and password as form data (email or anything else won't work)
