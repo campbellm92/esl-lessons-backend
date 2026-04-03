@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from app.core.config import settings
-from app.api import auth
+from app.api import auth, lesson
 from app.db.database import engine
 from app.models import user
 
@@ -23,6 +23,7 @@ app.add_middleware(
 app.add_middleware(TrustedHostMiddleware, allowed_hosts=["*"])
 
 app.include_router(auth.router, prefix=f"/auth", tags=["authentication"])
+app.include_router(lesson.router, prefix=f"/lessons", tags=["lessons"])
 
 @app.get("/")
 def health_check():
