@@ -1,10 +1,9 @@
 from pydantic import BaseModel
 from datetime import datetime
-from typing import Optional
+from typing import Optional, Any, Dict
 
-# Base schema for task
 class LessonBase(BaseModel):
     title: str
-    content: Optional[str] = None
+    content: Dict[str, Any] = None
     created_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
