@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     DATABASE_URL: PostgresDsn
     
     # CORS
-    BACKEND_CORS_ORIGINS: list[str]
+    CORS_ORIGINS: list[str]
     
     class Config:
         env_file = ".env"
