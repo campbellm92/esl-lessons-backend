@@ -42,6 +42,9 @@ def load_lessons():
                 title=data["title"],
                 slug=data.get("slug"),
                 level=data.get("level"),
+                description=data.get("description"),
+                tags=data.get("tags"),
+                image=data.get("image"),
                 content=data["content"]
             )
 
